@@ -1,0 +1,125 @@
+Exercice 1:
+let x = "150";
+let y = 150;
+let z = true;
+
+console.log(typeof x); // string
+console.log(typeof y); // number
+console.log(typeof z); // boolean
+
+// Conversion de x
+x = Number(x);
+console.log(typeof x); // number
+
+Exercice 2:
+let prenom = "Sara";
+let age = 22;
+
+let phrase = "Je m'appelle " + prenom + " et j'ai " + age + " ans.";
+console.log(phrase);
+
+// Modification de l'âge
+age = 23;
+let phrase2 = "Je m'appelle " + prenom + " et j'ai " + age + " ans.";
+console.log(phrase2);
+
+Exercice 3:
+let n = Number(prompt("Entrez un nombre : "));
+
+if (n < 0) {
+    console.log("Nombre négatif");
+} else {
+    if (n <= 10) {
+        console.log("Petit");
+    } else {
+        if (n <= 50) {
+            console.log("Moyen");
+        } else {
+            if (n <= 100) {
+                console.log("Grand");
+            } else {
+                console.log("Très grand");
+            }
+        }
+    }
+}
+
+exercice 4:
+let min = Number(prompt("Entrez le nombre minimal : "));
+let max = Number(prompt("Entrez le nombre maximal : "));
+
+for (let i = min; i <= max; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+        console.log(i + " : Five&Three");
+    } else if (i % 3 === 0) {
+        console.log(i + " : Three");
+    } else if (i % 5 === 0) {
+        console.log(i + " : Five");
+    } else {
+        console.log(i);
+    }
+}
+
+exercice 5:
+let n = Number(prompt("Entrez un nombre : "));
+
+for (let i = 1; i <= 10; i++) {
+    console.log(`${n} x ${i} = ${n * i}`);
+}
+
+exercice 6:
+let sommePairs = 0;
+let sommeImpairs = 0;
+
+for (let i = 1; i <= 50; i++) {
+    if (i % 2 === 0) {
+        sommePairs += i;
+    } else {
+        sommeImpairs += i;
+    }
+}
+
+console.log("Somme des pairs :", sommePairs);
+console.log("Somme des impairs :", sommeImpairs);
+
+exercice 7:
+function verifierMotDePasse(mdp) {
+    return mdp.length >= 8 && mdp.includes("@");
+}
+
+let mdp = prompt("Entrez un mot de passe : ");
+
+if (verifierMotDePasse(mdp)) {
+    console.log("Mot de passe valide");
+} else {
+    console.log("Mot de passe non valide");
+}
+
+exercice 8:
+function totalAvecRemise(total, remise) {
+    return total - (total * remise / 100);
+}
+
+let total = Number(prompt("Entrez le total HT : "));
+let remise = Number(prompt("Entrez la remise (%) : "));
+
+let resultat = totalAvecRemise(total, remise);
+console.log("Total final :", resultat);
+
+exercice 9:
+function factorielle(n) {
+    if (n === 0) return 1;
+    return n * factorielle(n - 1);
+}
+
+console.log(factorielle(5)); // 120
+
+exercice 10 :
+function sommeIterative(n) {
+    let s = 0;
+    for (let i = 1; i <= n; i++) {
+        s += i;
+    }
+    return s;
+}
+
